@@ -74,7 +74,7 @@
 
   /* Font Utilities */
   .font-heading {
-    font-family: "Abril Fatface", serif;
+    font-family: "Abril Fatface";
     font-weight: 400;
     font-size: 20px;
     letter-spacing: -0.025em;
