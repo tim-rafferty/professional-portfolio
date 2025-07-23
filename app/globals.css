@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 15 65% 60%;
+  --foreground: 35 20% 85%;
+  --card: 15 45% 50%;
+  --card-foreground: 35 20% 85%;
+  --popover: 15 45% 50%;
+  --popover-foreground: 35 20% 85%;
+  --primary: 25 65% 55%;
+  --primary-foreground: 35 20% 15%;
+  --secondary: 15 35% 45%;
+  --secondary-foreground: 35 20% 85%;
+  --muted: 15 25% 40%;
+  --muted-foreground: 35 15% 60%;
+  --accent: 15 40% 45%;
+  --accent-foreground: 35 20% 85%;
+  --destructive: 0 65% 55%;
+  --destructive-foreground: 35 20% 85%;
+  --border: 15 35% 40%;
+  --input: 15 35% 40%;
+  --ring: 25 65% 55%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/rose-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: hsl(35, 20%, 85%);
+  font-family: var(--font-sf-pro-display), -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Font Utilities */
+  .font-heading {
+    font-family: var(--font-recoleta), serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.025em;
+  }
+
+  .font-display {
+    font-family: var(--font-abril-fatface), serif;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+  }
+
+  .font-accent {
+    font-family: var(--font-recoleta), serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .font-body {
+    font-family: var(--font-sf-pro-display), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .font-caption {
+    font-family: var(--font-sf-pro-display), sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+  }
+
+  /* Custom Scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thumb-zinc-700::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+  }
+
+  .scrollbar-track-zinc-800\/50::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Typography Hierarchy */
+  h1 {
+    @apply font-display;
+  }
+
+  h2 {
+    @apply font-heading;
+  }
+
+  h3 {
+    @apply font-heading;
+  }
+
+  h4 {
+    @apply font-heading;
+  }
+
+  h5 {
+    @apply font-accent;
+  }
+
+  h6 {
+    @apply font-accent;
+  }
+
+  p {
+    @apply font-body;
+  }
+
+  .text-caption {
+    @apply font-caption text-zinc-400;
+  }
+
+  .text-label {
+    @apply font-accent text-sm font-medium tracking-wide uppercase;
+  }
+
+  /* Button Typography */
+  button {
+    @apply font-accent;
+  }
+
+  /* Navigation Typography */
+  nav a {
+    @apply font-accent font-medium;
+  }
+
+  /* Card Titles */
+  .card-title {
+    @apply font-heading font-normal;
+  }
+
+  /* Badge Typography */
+  .badge {
+    @apply font-caption font-medium;
+  }
+}
+
+/* Updated background overlay for better contrast with the rose image */
+.boho-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 25%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.4) 75%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+/* Add warm glow effects */
+@keyframes warm-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(223, 120, 87, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(230, 138, 106, 0.4);
+  }
+}
+
+.animate-warm-glow {
+  animation: warm-glow 4s ease-in-out infinite;
+}
+
+/* Earthy texture overlay */
+.earthy-texture::before {
+  content: "";
+  position: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 25% 25%, rgba(223, 120, 87, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(214, 107, 71, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}

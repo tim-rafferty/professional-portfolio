@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "title": "Timothy Rafferty's Website",
+    "description": "Website showcasing DevOps, observability expertise, implementation engineering, and technical product leadership"
+  },
+  "personal": {
+    "name": "Timothy Rafferty",
+    "location": "Iowa, USA",
+    "avatar": "/timothy-updated-profile.png",
+    "email": "timothymichaelrafferty@gmail.com",
+    "phone": "+1 (515) 559-4081",
+    "availableForWork": true,
+    "badges": [
+      "DevOps",
+      "Observability",
+      "Site Reliability",
+      "Implementation Engineering",
+      "Technical Leadership",
+      "API Integrations"
+    ],
+    "social": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/tim-rafferty",
+        "icon": "Github"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/timothy-rafferty/",
+        "icon": "Linkedin"
+      },
+      {
+        "platform": "Email",
+        "url": "mailto:timothymichaelrafferty@gmail.com",
+        "icon": "Mail"
+      }
+    ]
+  },
+  "about": {
+    "bio": "Strategic technical leader with over 15 years of experience driving complex software integrations, implementing real-time observability solutions, and launching scalable, API-driven systems across fintech and SaaS environments. Proven expertise in roles spanning DevOps, implementation engineering, and technical product leadership. Passionate about delivering measurable impact through automation, rigorous testing, and strong cross-functional collaboration.",
+    "focus": [
+      "Leading complex software integrations and API-driven systems",
+      "Building real-time observability and monitoring solutions",
+      "Product and workflow design for enterprise banking clients",
+      "Mentoring teams on advanced issue identification and data analysis techniques"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native",
+        "level": 100,
+        "flag": "🇺🇸"
+      }
+    ],
+    "interests": ["DevOps", "Observability", "API Design", "Automation", "Technical Leadership", "Fintech", "SaaS"]
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Strategic Deployment Lead",
+      "company": "Blend",
+      "period": "01/2021 – Present",
+      "description": "Technical lead for the entire Wells Fargo account, overseeing multiple lines of business including personal loans, credit cards, and home lending. Function as implementation engineer by designing, coding, and deploying solutions for mission-critical workflows. In parallel, I led full-cycle technical implementations and workflow design for clients such as apply.city.bank and apply.peoplefirst.com, including requirements gathering, solution architecture for deposit accounts and consumer lending, and integration of key services such as IDV, SSO, application webhooks, OLB enrollment, and banker workspace tools.",
+      "achievements": [
+        "Led the migration, design, and launch of Wells Fargo's personal lending platform (personal-loan.wf.com), processing almost 1,000,000+ applications monthly since launch and contributing to 10% increase in overall loan volume.",
+        "Designed, implemented, and launched the end-to-end workflow for People First Credit Union's deposit account and consumer lending products (apply.peoplefirst.com), increasing application volume and reducing submission time by up to 20%.",
+        "Migrated, designed, and launched City Bank Texas's deposit account products (apply.city.bank), integrating SSO, online banking (OLB) enrollment, document export, and identity verification (IDV) services.",
+        "Authored dozens of technical articles and knowledge base entries on monitoring, log investigation, certificate management, and API tooling, boosting team onboarding efficiency and supporting long-term operational enablement.",
+        "Developed hundreds of SIEM (Splunk, Datadog, Observe) alerts and constructed multiple dashboards, vastly improving issue detection and resolution by atleast 30%.",
+        "Created procedures for client certificates and managed end-to-end certificate lifecycle for 19 Wells Fargo assets, eliminating certificate-related outages.",
+        "Developed tailored Postman API collections for each client and project to support implementation efforts and ensure long-term data integrity during onboarding and future troubleshooting."
+      ],
+      "technologies": [
+        "Splunk",
+        "Github",
+        "Datadog",
+        "Observe",
+        "Postman",
+        "TypeScript",
+        "JavaScript",
+        "Velocity Script",
+        "REST APIs",
+        "CI/CD"
+      ]
+    },
+    {
+      "title": "Systems Analyst IV",
+      "company": "Wells Fargo",
+      "period": "09/2015 – 07/2020",
+      "description": "Duties included site reliability monitoring, implementation engineering, and fraud detection specialist. Led the global launch of Wells Fargo's Online Mortgage Application and implemented strategies to ensure system integrity and uptime.",
+      "achievements": [
+        "Led the global pilot and launch of Wells Fargo's Online Mortgage Application (lending.wf.com) in 2018, driving key innovations that improved operational efficiency, elevated the customer experience, and set the foundation for future digital lending initiatives.",
+        "Designed and implemented real-time monitoring strategies using Splunk and AppDynamics, building 40+ custom alerts and 10+ dashboards to ensure visibility across mission-critical banking systems.",
+        "Directed fraud monitoring efforts during Wells Fargo's 2016 fake accounts scandal, this included daily Splunk-based reporting along with data warehouse audits. Delivered actionable insights by analyzing structured and unstructured datasets using SQL, Teradata, and regex-based log parsing.",
+        "Led incident response and root cause investigations by analyzing logs, XML, JSON, Oracle errors, and API payloads. Orchestrated cross-functional war rooms to rapidly triage and resolve production outages, minimizing system downtime and customer impact.",
+        "Led incident response and root cause investigations by analyzing logs, XML, JSON, Oracle errors, and API payloads. Orchestrated cross-functional war rooms to rapidly triage and resolve production outages, minimizing system downtime and customer impact.",
+        "Authored comprehensive QA test scenarios and scripts, improving release quality and reducing post-production defects. Aligned testing efforts with business objectives by collaborating closely with engineering and product teams."
+      ],
+      "technologies": ["Splunk", "SQL", "Teradata", "Oracle", "XML", "JSON", "API Integration"]
+    },
+    {
+      "title": "System Administrator",
+      "company": "Cognizant",
+      "period": "2014 – 2015",
+      "description": "Led configuration and deployment of infrastructure supporting 300+ person operational floor at Travelers Insurance, ensuring seamless system integration and optimal performance.",
+      "achievements": [
+        "Configured and deployed hardware/software infrastructure for 300+ person operational floor.",
+        "Implemented robust monitoring solutions improving application stability.",
+        "Automated routine tasks with custom PowerShell scripts driving operational efficiency.",
+        "Coordinated enterprise-wide software upgrades, patching, and regression testing."
+      ],
+      "technologies": ["PowerShell", "Windows Server", "IIS", "Infrastructure Management"]
+    },
+    {
+      "title": "Systems Engineer",
+      "company": "Imagetek",
+      "period": "2013 – 2014",
+      "description": "Led end-to-end migrations of legacy databases to SQL Server for county government clients, including data transformation and digitization of county records.",
+      "achievements": [
+        "Led database migrations from legacy systems to SQL Server for county government clients.",
+        "Configured SQL Server environments with optimization and backup strategies.",
+        "Digitized and consolidated county records into centralized digital repositories.",
+        "Transformed structured data formats using regular expressions and scripting."
+      ],
+      "technologies": ["SQL Server", "XML", "JSON", "HTML", "Regex", "Database Migration"]
+    },
+    {
+      "title": "Business Systems Consultant",
+      "company": "Principal",
+      "period": "2012 – 2013",
+      "description": "Delivered tier 3 application support and led RSA authentication setup and troubleshooting across cross-functional teams.",
+      "achievements": [
+        "Delivered tier 3 application support including imagining, backup, and hardware replacement.",
+        "Supported software configuration and resolved critical system bugs, improving application stability and efficiency.",
+        "Performed in-depth system analysis to identify root causes of recurring incidents, implementing solutions that reduced incident volume and strengthened overall business continuity."
+      ],
+      "technologies": ["RSA Authentication", "Active Directory", "System Analysis", "System Imaging", "Troubleshooting"]
+    },
+    {
+      "title": "Technical Lead",
+      "company": "DIT",
+      "period": "2009 – 2012",
+      "description": "Facilitated LAN setup and Windows Server configurations for small office environments, managing multiple concurrent tasks and delivering solutions across business in center Iowa",
+      "achievements": [
+        "Facilitated LAN setup and Windows Server configurations for small office environments supporting up to 50 users, ensuring stable and secure IT infrastructure deployment within 2-week project timelines.",
+        "Managed multiple concurrent tasks, consistently delivering solutions ahead of schedule and contributing to reductions in overall hardware and software issues.",
+        "Diagnosed and resolved over 1,500 software and hardware issues with a 98% first-contact resolution rate, significantly improving end-user satisfaction and help earn DIT the local award of Best IT Repair Service."
+      ],
+      "technologies": [
+        "Windows Server",
+        "LAN Configuration",
+        "Hardware Replacement",
+        "IT Support",
+        "Virus/Malware Removal"
+      ]
+    }
+  ],
+  "credentials": {
+    "certifications": [
+      {
+        "name": "CompTIA Security+",
+        "issuer": "CompTIA",
+        "date": "2022",
+        "logo": "/comptia-security-plus-logo.png"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Community College Coursework",
+        "institution": "DMACC Community College",
+        "year": "2009-2010",
+        "logo": "/dmacc-logo.png"
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "ADM High School",
+        "year": "2007",
+        "logo": "/adm-community-schools-logo.png"
+      }
+    ],
+    "skills": [
+      "DevOps Engineering",
+      "Implementation Engineering",
+      "Technical Leadership",
+      "API Integration",
+      "Observability",
+      "SIEM Expert",
+      "Certificate Management",
+      "Incident Response",
+      "Database Migration"
+    ]
+  },
+  "technicalSkills": {
+    "observability": ["Splunk", "Datadog", "AppDynamics", "Kibana", "Observe"],
+    "development": ["Python", "TypeScript", "JavaScript", "Velocity Script", "Regex", "SQL", "HTML", "JSON", "Golang"],
+    "infrastructure": ["Docker", "Kubernetes", "CI/CD", "GitHub", "Mulesoft", "API Gateway", "SFTP", "Webhooks"],
+    "tools": ["Postman", "Retool", "Zapier", "VS Code", "Cursor", "MABL", "Jira", "Confluence", "Mode"],
+    "security": ["X.509 Certificates", "SAML", "SSO", "OAuth", "Certificate Lifecycle Management"],
+    "softSkills": [
+      "Technical Leadership",
+      "Mentorship",
+      "Clear Communication",
+      "Project & Time Management",
+      "High Accountability",
+      "Stakeholder Engagement",
+      "Cross-functional Collaboration",
+      "Adaptability",
+      "Complex Problem Solving",
+      "Project Management"
+    ]
+  }
+}
