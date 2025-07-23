@@ -20,6 +20,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
+        abril: ['"Abril Fatface"', 'cursive'],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         serif: ["var(--font-dm-serif-text)", "Georgia", "serif"],
         display: ["var(--font-playfair-display)", "Georgia", "serif"],
