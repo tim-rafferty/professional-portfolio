@@ -3,7 +3,7 @@
   font-family: "Abril Fatface";
   font-style: normal;
   font-weight: 400;
-  src: url("/public/fonts/abril-fatface-v24-latin-regular.woff2") format("woff2"); 
+  src: url("/fonts/abril-fatface-v24-latin-regular.woff2") format("woff2");
 }
 
 @tailwind base;
@@ -74,7 +74,7 @@
 
   /* Font Utilities */
   .font-heading {
-    font-family: "Abril Fatface";
+    font-family: "Abril Fatface", cursive;
     font-weight: 400;
     font-size: 20px;
     letter-spacing: -0.025em;
@@ -82,8 +82,8 @@
   }
 
   .font-display {
-    font-family: "Playfair Display", serif;
-    font-weight: 700;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
     font-size: 40px;
     letter-spacing: -0.05em;
     text-transform: uppercase;
@@ -162,19 +162,27 @@
 
   /* Typography Hierarchy */
   h1 {
-    @apply font-display text-white font-bold;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    color: #ffffff;
   }
 
   h2 {
-    @apply font-heading text-white font-bold;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    color: #ffffff;
   }
 
   h3 {
-    @apply font-heading text-white font-bold;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    color: #ffffff;
   }
 
   h4 {
-    @apply font-heading text-white font-bold;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    color: #ffffff;
   }
 
   h5 {
@@ -209,7 +217,9 @@
 
   /* Card Titles */
   .card-title {
-    @apply font-heading font-bold text-white;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    color: #ffffff;
   }
 
   /* Badge Typography */
@@ -219,7 +229,9 @@
 
   /* Section Headers */
   .section-header {
-    @apply font-heading text-lg font-bold text-white;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    color: #ffffff;
   }
 }
 
