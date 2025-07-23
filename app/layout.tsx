@@ -26,12 +26,14 @@ const outfit = Outfit({
   display: "swap",
 })
 
+// Local fonts with fallbacks
 const abrilFatface = localFont({
   src: "./fonts/AbrilFatface-Regular.woff2",
   variable: "--font-abril-fatface",
   weight: "400",
   style: "normal",
   display: "swap",
+  fallback: ["serif"],
 })
 
 const recoleta = localFont({
@@ -44,6 +46,7 @@ const recoleta = localFont({
   ],
   variable: "--font-recoleta",
   display: "swap",
+  fallback: ["serif"],
 })
 
 const sfProDisplay = localFont({
@@ -56,6 +59,7 @@ const sfProDisplay = localFont({
   ],
   variable: "--font-sf-pro-display",
   display: "swap",
+  fallback: ["-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
 })
 
 const metaInfo = getMetaInfo()
@@ -63,7 +67,7 @@ const metaInfo = getMetaInfo()
 export const metadata: Metadata = {
   title: metaInfo.title,
   description: metaInfo.description,
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
