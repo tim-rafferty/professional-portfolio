@@ -1,5 +1,8 @@
+"use client"
+
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 
 interface ExperienceCardProps {
   title: string
@@ -19,41 +22,53 @@ export function ExperienceCard({
   technologies,
 }: ExperienceCardProps) {
   return (
-    <div className="space-y-4 pb-6 border-b border-zinc-800 last:border-0 last:pb-0">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
-        <div>
-          <h4 className="font-heading text-base sm:text-lg font-normal">{title}</h4>
-          <div className="font-accent text-sm text-green-400">{company}</div>
-        </div>
-        <div className="text-xs text-zinc-400 bg-zinc-800/70 px-2 py-1 sm:px-3 sm:py-1 rounded-full self-start mt-1 sm:mt-0 sm:self-auto">
-          {period}
-        </div>
-      </div>
+    <div className="relative">
+      <Card className="bg-zinc-800/50 border-zinc-700 backdrop-blur-sm">
+        <CardContent className="p-6">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+            <div className="flex-1">
+              <h4 className="font-heading text-lg font-bold text-white mb-1">{title}</h4>
+              <p className="font-accent text-white font-bold mb-2">{company}</p>
+            </div>
+            <div className="text-sm text-zinc-300 bg-zinc-700/50 px-3 py-1 rounded-full whitespace-nowrap">
+              {period}
+            </div>
+          </div>
 
-      <p className="text-sm text-zinc-300">{description}</p>
+          <p className="text-sm text-white mb-4 leading-relaxed">{description}</p>
 
-      <div className="space-y-3">
-        <h5 className="font-accent text-sm font-medium text-zinc-400">Key Achievements</h5>
-        <ul className="space-y-2">
-          {achievements.map((achievement, index) => (
-            <li key={index} className="flex text-sm text-zinc-300">
-              <CheckCircle2 className="w-4 h-4 mr-2 text-cyan-400 flex-shrink-0 mt-0.5" />
-              <span>{achievement}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+          {achievements && achievements.length > 0 && (
+            <div className="mb-4">
+              <h5 className="font-heading text-sm font-bold text-white mb-3">Key Achievements</h5>
+              <div className="space-y-2">
+                {achievements.map((achievement, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-white leading-relaxed">{achievement}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
-      <div>
-        <h5 className="font-accent text-sm font-medium text-zinc-400 mb-2">Technologies & Skills</h5>
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <Badge key={index} variant="outline" className="text-xs bg-zinc-800/50 hover:bg-zinc-800">
-              {tech}
-            </Badge>
-          ))}
-        </div>
-      </div>
+          {technologies && technologies.length > 0 && (
+            <div>
+              <h5 className="font-heading text-sm font-bold text-white mb-3">Technologies & Skills</h5>
+              <div className="flex flex-wrap gap-2">
+                {technologies.map((tech, index) => (
+                  <Badge
+                    key={index}
+                    variant="secondary"
+                    className="bg-zinc-700/50 text-white border-zinc-600 hover:bg-zinc-600/50"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )}
+        </CardContent>
+      </Card>
     </div>
   )
 }

@@ -2,43 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 15 65% 60%;
-  --foreground: 35 20% 85%;
-  --card: 15 45% 50%;
-  --card-foreground: 35 20% 85%;
-  --popover: 15 45% 50%;
-  --popover-foreground: 35 20% 85%;
-  --primary: 25 65% 55%;
-  --primary-foreground: 35 20% 15%;
-  --secondary: 15 35% 45%;
-  --secondary-foreground: 35 20% 85%;
-  --muted: 15 25% 40%;
-  --muted-foreground: 35 15% 60%;
-  --accent: 15 40% 45%;
-  --accent-foreground: 35 20% 85%;
-  --destructive: 0 65% 55%;
-  --destructive-foreground: 35 20% 85%;
-  --border: 15 35% 40%;
-  --input: 15 35% 40%;
-  --ring: 25 65% 55%;
-}
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 100%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-image: url("/rose-background.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: hsl(35, 20%, 85%);
-  font-family: var(--font-sf-pro-display), -apple-system, BlinkMacSystemFont, sans-serif;
-  min-height: 100vh;
-  font-weight: 400;
-  line-height: 1.6;
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
 @layer utilities {
@@ -48,39 +66,44 @@ body {
 
   /* Font Utilities */
   .font-heading {
-    font-family: var(--font-recoleta), serif;
-    font-weight: 500;
+    font-family: "DM Serif Text", serif;
+    font-weight: 700;
     font-size: 20px;
     letter-spacing: -0.025em;
+    color: #ffffff;
   }
 
   .font-display {
-    font-family: var(--font-abril-fatface), serif;
-    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
     font-size: 40px;
     letter-spacing: -0.05em;
     text-transform: uppercase;
+    color: #ffffff;
   }
 
   .font-accent {
-    font-family: var(--font-recoleta), serif;
-    font-weight: 500;
+    font-family: "DM Serif Text", serif;
+    font-weight: 700;
     font-size: 20px;
     letter-spacing: -0.01em;
+    color: #ffffff;
   }
 
   .font-body {
-    font-family: var(--font-sf-pro-display), sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
+    color: #ffffff;
   }
 
   .font-caption {
-    font-family: var(--font-sf-pro-display), sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     letter-spacing: 0.025em;
+    color: #ffffff;
   }
 
   /* Custom Scrollbar */
@@ -89,12 +112,12 @@ body {
   }
 
   .scrollbar-thumb-zinc-700::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
   }
 
   .scrollbar-track-zinc-800\/50::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   ::-webkit-scrollbar {
@@ -103,16 +126,16 @@ body {
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -121,103 +144,99 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   /* Typography Hierarchy */
   h1 {
-    @apply font-display;
+    @apply font-display text-white font-bold;
   }
 
   h2 {
-    @apply font-heading;
+    @apply font-heading text-white font-bold;
   }
 
   h3 {
-    @apply font-heading;
+    @apply font-heading text-white font-bold;
   }
 
   h4 {
-    @apply font-heading;
+    @apply font-heading text-white font-bold;
   }
 
   h5 {
-    @apply font-accent;
+    @apply font-accent text-white font-bold;
   }
 
   h6 {
-    @apply font-accent;
+    @apply font-accent text-white font-bold;
   }
 
   p {
-    @apply font-body;
+    @apply font-body text-white;
   }
 
   .text-caption {
-    @apply font-caption text-zinc-400;
+    @apply font-caption text-white;
   }
 
   .text-label {
-    @apply font-accent text-sm font-medium tracking-wide uppercase;
+    @apply font-accent text-sm font-bold tracking-wide uppercase text-white;
   }
 
   /* Button Typography */
   button {
-    @apply font-accent;
+    @apply font-accent text-white;
   }
 
   /* Navigation Typography */
   nav a {
-    @apply font-accent font-medium;
+    @apply font-accent font-bold text-white;
   }
 
   /* Card Titles */
   .card-title {
-    @apply font-heading font-normal;
+    @apply font-heading font-bold text-white;
   }
 
   /* Badge Typography */
   .badge {
-    @apply font-caption font-medium;
+    @apply font-caption font-medium text-white;
+  }
+
+  /* Section Headers */
+  .section-header {
+    @apply font-heading text-lg font-bold text-white;
   }
 }
 
-/* Updated background overlay for better contrast with the rose image */
-.boho-gradient {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.4) 25%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.4) 75%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+/* Black background with subtle texture */
+.black-gradient {
+  background: #000000;
 }
 
-/* Add warm glow effects */
-@keyframes warm-glow {
+/* Add subtle glow effects for better contrast */
+@keyframes subtle-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(223, 120, 87, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
   50% {
-    box-shadow: 0 0 30px rgba(230, 138, 106, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
   }
 }
 
-.animate-warm-glow {
-  animation: warm-glow 4s ease-in-out infinite;
+.animate-subtle-glow {
+  animation: subtle-glow 4s ease-in-out infinite;
 }
 
-/* Earthy texture overlay */
-.earthy-texture::before {
-  content: "";
-  position: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(circle at 25% 25%, rgba(223, 120, 87, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(214, 107, 71, 0.1) 0%, transparent 50%);
-  pointer-events: none;
+/* White text emphasis */
+.text-white-emphasis {
+  color: #ffffff !important;
+  font-weight: 700 !important;
 }

@@ -1,11 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, DM_Serif_Text, Outfit } from "next/font/google"
-import localFont from "next/font/local"
+import { Inter, DM_Serif_Text, Playfair_Display, Outfit } from "next/font/google"
 import "./globals.css"
-import { ScrollProgressIndicator } from "@/components/scroll-progress-indicator"
+import { ThemeProvider } from "@/components/theme-provider"
 import { AnimationProvider } from "@/contexts/animation-context"
-import { getMetaInfo } from "@/lib/data"
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,9 +13,15 @@ const inter = Inter({
 })
 
 const dmSerifText = DM_Serif_Text({
-  subsets: ["latin"],
   weight: ["400"],
-  variable: "--font-dm-serif",
+  subsets: ["latin"],
+  variable: "--font-dm-serif-text",
+  display: "swap",
+})
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
   display: "swap",
 })
 
@@ -26,48 +31,38 @@ const outfit = Outfit({
   display: "swap",
 })
 
-// Local fonts with fallbacks
-const abrilFatface = localFont({
-  src: "./fonts/AbrilFatface-Regular.woff2",
-  variable: "--font-abril-fatface",
-  weight: "400",
-  style: "normal",
-  display: "swap",
-  fallback: ["serif"],
-})
-
-const recoleta = localFont({
-  src: [
-    {
-      path: "./fonts/Recoleta-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-  ],
-  variable: "--font-recoleta",
-  display: "swap",
-  fallback: ["serif"],
-})
-
-const sfProDisplay = localFont({
-  src: [
-    {
-      path: "./fonts/SFProDisplay-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-sf-pro-display",
-  display: "swap",
-  fallback: ["-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
-})
-
-const metaInfo = getMetaInfo()
-
 export const metadata: Metadata = {
-  title: metaInfo.title,
-  description: metaInfo.description,
-  generator: "v0.dev",
+  title: "Timothy Rafferty - Portfolio",
+  description: "Strategic technical leader with expertise in DevOps, observability, and API-driven systems",
+  keywords: ["Timothy Rafferty", "DevOps", "Technical Leadership", "Observability", "API Integration"],
+  authors: [{ name: "Timothy Rafferty" }],
+  creator: "Timothy Rafferty",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://timothyrafferty.dev",
+    title: "Timothy Rafferty - Portfolio",
+    description: "Strategic technical leader with expertise in DevOps, observability, and API-driven systems",
+    siteName: "Timothy Rafferty Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timothy Rafferty - Portfolio",
+    description: "Strategic technical leader with expertise in DevOps, observability, and API-driven systems",
+    creator: "@tim_rafferty",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -76,14 +71,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${dmSerifText.variable} ${outfit.variable} ${abrilFatface.variable} ${recoleta.variable} ${sfProDisplay.variable}`}
+        className={`${inter.variable} ${dmSerifText.variable} ${playfairDisplay.variable} ${outfit.variable} antialiased`}
       >
-        <AnimationProvider>
-          <ScrollProgressIndicator />
-          {children}
-        </AnimationProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          <AnimationProvider>
+            {children}
+            <Toaster />
+          </AnimationProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

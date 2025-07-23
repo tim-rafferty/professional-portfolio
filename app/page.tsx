@@ -12,23 +12,25 @@ import { CredentialsSection } from "@/components/credentials-section"
 import { getExperienceInfo, getTechnicalSkillsInfo, getReferencesInfo } from "@/lib/data"
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
-  return <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-zinc-400">{children}</div>
+  return (
+    <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-white border border-zinc-700">
+      {children}
+    </div>
+  )
 }
 
 const ReferenceCard = ({ reference }: { reference: any }) => {
   return (
-    <Card className="bg-zinc-800/50 border-zinc-700 backdrop-blur-sm h-full">
+    <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm h-full">
       <CardContent className="p-6">
         <div className="flex items-start gap-4">
-          <QuoteIcon className="w-6 h-6 text-terracotta-400 flex-shrink-0 mt-1" />
+          <QuoteIcon className="w-6 h-6 text-white flex-shrink-0 mt-1" />
           <div className="space-y-4">
-            <blockquote className="font-body text-sm text-zinc-300 italic leading-relaxed">
-              "{reference.quote}"
-            </blockquote>
+            <blockquote className="font-body text-sm text-white italic leading-relaxed">"{reference.quote}"</blockquote>
             <div className="border-t border-zinc-700 pt-4">
-              <div className="font-heading text-white font-medium">{reference.name}</div>
-              <div className="font-accent text-sm text-zinc-400">{reference.title}</div>
-              <div className="font-accent text-sm text-zinc-500">{reference.company}</div>
+              <div className="font-heading text-white font-bold">{reference.name}</div>
+              <div className="font-accent text-sm text-white">{reference.title}</div>
+              <div className="font-accent text-sm text-zinc-300">{reference.company}</div>
             </div>
           </div>
         </div>
@@ -44,9 +46,9 @@ export default function Home() {
   const references = getReferencesInfo()
 
   return (
-    <main className="min-h-screen bg-background text-foreground boho-gradient">
+    <main className="min-h-screen bg-black text-white">
       {/* Background Grid Pattern */}
-      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-10 z-0"></div>
 
       <div className="relative z-10 container mx-auto p-3 sm:p-4 pt-4 sm:pt-6 pb-6 sm:pb-8">
         {/* Main Content Grid */}
@@ -61,11 +63,11 @@ export default function Home() {
           <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-4 sm:space-y-6">
             {/* Experience Section - Expanded */}
             <AnimatedSection animation="fade-up" id="experience">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
-                    <BriefcaseIcon className="w-5 h-5 mr-2 text-terracotta-400" />
-                    <h3 className="font-heading text-lg font-normal">Experience</h3>
+                    <BriefcaseIcon className="w-5 h-5 mr-2 text-white" />
+                    <h3 className="font-heading text-lg font-bold text-white">Experience</h3>
                   </div>
 
                   <div className="space-y-6 sm:space-y-8">
@@ -93,17 +95,17 @@ export default function Home() {
 
             {/* Skills Section */}
             <AnimatedSection animation="fade-up" id="skills">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4">
-                    <CodeIcon className="w-5 h-5 mr-2 text-terracotta-400" />
-                    <h3 className="font-heading text-lg font-normal">Technical Skills</h3>
+                    <CodeIcon className="w-5 h-5 mr-2 text-white" />
+                    <h3 className="font-heading text-lg font-bold text-white">Technical Skills</h3>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <AnimatedSection animation="slide-right" delay={100}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-medium text-zinc-400">Observability & Monitoring</h4>
+                        <h4 className="font-accent text-sm font-bold text-white">Observability & Monitoring</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.observability?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -114,7 +116,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={200}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-medium text-zinc-400">Development</h4>
+                        <h4 className="font-accent text-sm font-bold text-white">Development</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.development?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -125,7 +127,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-right" delay={300}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-medium text-zinc-400">Infrastructure & DevOps</h4>
+                        <h4 className="font-accent text-sm font-bold text-white">Infrastructure & DevOps</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.infrastructure?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -136,7 +138,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={400}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-medium text-zinc-400">Tools & Platforms</h4>
+                        <h4 className="font-accent text-sm font-bold text-white">Tools & Platforms</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.tools?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -147,7 +149,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-right" delay={500}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-medium text-zinc-400">Security & Authentication</h4>
+                        <h4 className="font-accent text-sm font-bold text-white">Security & Authentication</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.security?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -158,7 +160,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={600}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-medium text-zinc-400">Leadership & Soft Skills</h4>
+                        <h4 className="font-accent text-sm font-bold text-white">Leadership & Soft Skills</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.softSkills?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -173,11 +175,11 @@ export default function Home() {
 
             {/* References Section */}
             <AnimatedSection animation="fade-up" id="references">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
-                    <QuoteIcon className="w-5 h-5 mr-2 text-terracotta-400" />
-                    <h3 className="font-heading text-lg font-normal">References</h3>
+                    <QuoteIcon className="w-5 h-5 mr-2 text-white" />
+                    <h3 className="font-heading text-lg font-bold text-white">References</h3>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -193,14 +195,18 @@ export default function Home() {
 
             {/* Projects Section */}
             <AnimatedSection animation="fade-up" id="projects">
-              <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
+              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center">
-                      <GlobeIcon className="w-5 h-5 mr-2 text-terracotta-400" />
-                      <h3 className="font-heading text-lg font-normal">Recent Projects</h3>
+                      <GlobeIcon className="w-5 h-5 mr-2 text-white" />
+                      <h3 className="font-heading text-lg font-bold text-white">Recent Projects</h3>
                     </div>
-                    <Button variant="ghost" size="sm" className="text-xs sm:text-sm px-2 sm:px-3">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="text-xs sm:text-sm px-2 sm:px-3 text-white hover:text-white"
+                    >
                       View All
                     </Button>
                   </div>
@@ -227,7 +233,7 @@ export default function Home() {
         <AnimatedSection
           animation="fade-in"
           delay={500}
-          className="mt-8 sm:mt-12 py-4 sm:py-6 text-center text-xs sm:text-sm text-zinc-500"
+          className="mt-8 sm:mt-12 py-4 sm:py-6 text-center text-xs sm:text-sm text-white"
         >
           <p>© {new Date().getFullYear()} Timothy Rafferty. All rights reserved.</p>
         </AnimatedSection>
