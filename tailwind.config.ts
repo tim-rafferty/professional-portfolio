@@ -25,7 +25,7 @@ const config: Config = {
         serif: ["var(--font-dm-serif-text)", "Georgia", "serif"],
         display: ["var(--font-playfair-display)", "Georgia", "serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-dm-serif-text)", "Georgia", "serif"],
+        heading: ['"Abril Fatface"', 'cursive'],
         accent: ["var(--font-outfit)", "system-ui", "sans-serif"],
       },
       colors: {
