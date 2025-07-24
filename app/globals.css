@@ -69,7 +69,7 @@
     font-family: "DM Serif Text", serif;
     font-weight: 700;
     font-size: 20px;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
     color: #ffffff;
   }
 
@@ -79,15 +79,15 @@
     font-size: 40px;
     letter-spacing: -0.05em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #EEEDEB;
   }
 
   .font-accent {
     font-family: "DM Serif Text", serif;
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: -0.01em;
-    color: #ffffff;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+    color: #F6F6C9;
   }
 
   .font-body {
@@ -95,7 +95,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #ffffff;
+    color: #EEEDEB;
   }
 
   .font-caption {
@@ -103,7 +103,7 @@
     font-weight: 400;
     font-size: 0.875rem;
     letter-spacing: 0.025em;
-    color: #ffffff;
+    color: #CD1818;
   }
 
   /* Custom Scrollbar */

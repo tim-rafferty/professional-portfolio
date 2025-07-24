@@ -32,7 +32,7 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: "Timothy Rafferty - Portfolio",
+  title: "Timothy Rafferty",
   description: "Strategic technical leader with expertise in DevOps, observability, and API-driven systems",
   keywords: ["Timothy Rafferty", "DevOps", "Technical Leadership", "Observability", "API Integration"],
   authors: [{ name: "Timothy Rafferty" }],
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://timothyrafferty.dev",
-    title: "Timothy Rafferty - Portfolio",
+    url: "timothyrafferty.com",
+    title: "Timothy Rafferty",
     description: "Strategic technical leader with expertise in DevOps, observability, and API-driven systems",
-    siteName: "Timothy Rafferty Portfolio",
+    siteName: "Timothy Rafferty",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Timothy Rafferty - Portfolio",
+    title: "Timothy Rafferty",
     description: "Strategic technical leader with expertise in DevOps, observability, and API-driven systems",
     creator: "@tim_rafferty",
   },

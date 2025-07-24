@@ -30,7 +30,7 @@ const ReferenceCard = ({ reference }: { reference: any }) => {
             <div className="border-t border-zinc-700 pt-4">
               <div className="font-heading text-white font-bold">{reference.name}</div>
               <div className="font-accent text-sm text-white">{reference.title}</div>
-              <div className="font-accent text-sm text-zinc-300">{reference.company}</div>
+              <div className="font-accent text-sm text-rose-800">{reference.company}</div>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@ export default function Home() {
           delay={500}
           className="mt-8 sm:mt-12 py-4 sm:py-6 text-center text-xs sm:text-sm text-white"
         >
-          <p>© {new Date().getFullYear()} Timothy Rafferty. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Timothy Rafferty</p>
         </AnimatedSection>
       </div>
 
