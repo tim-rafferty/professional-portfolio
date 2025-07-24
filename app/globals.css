@@ -68,8 +68,8 @@
   .font-heading {
     font-family: "DM Serif Text", serif;
     font-weight: 700;
-    font-size: 20px;
-    letter-spacing: -0.03em;
+    font-size: 22px;
+    letter-spacing: -0.05em;
     color: #ffffff;
   }
 
@@ -84,9 +84,9 @@
 
   .font-accent {
     font-family: "DM Serif Text", serif;
-    font-weight: 400;
-    font-size: 17px;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.05em;
     color: #F6F6C9;
   }
 
