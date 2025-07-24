@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { SocialLinks } from "@/components/social-links"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { User, MapPin, Mail, Phone, Clock, Briefcase } from "lucide-react"
+import { User, MapPin, Mail, Phone, Clock, Briefcase } from 'lucide-react'
 import { getPersonalInfo, getAboutInfo } from "@/lib/data"
 
 export function EnhancedProfile() {
@@ -36,7 +36,7 @@ export function EnhancedProfile() {
               />
             </div>
             <div className="text-center">
-              <h2 className="font-heading font-bold text-white text-xl sm:text-2xl tracking-wide">Timothy Rafferty</h2>
+              <h2 className="font-heading font-bold text-white text-xl sm:text-2xl tracking-wide name-title">Timothy Rafferty</h2>
               <p className="font-accent text-sm text-white mb-1 font-bold">{personalInfo.title}</p>
               <div className="flex items-center justify-center text-xs text-white mb-3">
                 <MapPin className="w-3 h-3 mr-1" />

@@ -68,9 +68,10 @@
   .font-heading {
     font-family: "DM Serif Text", serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: -0.05em;
-    color: #ffffff;
+    color: #F8F8E1;
+    text-shadow: -1px 2px 0px rgba(214, 76, 76, 1);
   }
 
   .font-display {
@@ -80,6 +81,7 @@
     letter-spacing: -0.05em;
     text-transform: uppercase;
     color: #EEEDEB;
+    text-shadow: 3px 3px 0px rgba(255, 160, 140, 0.5);
   }
 
   .font-accent {
@@ -87,7 +89,8 @@
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -0.05em;
-    color: #F6F6C9;
+    color: #FEFBC7;
+    text-shadow: 2px 1px 0px rgba(255, 113, 240, 1);
   }
 
   .font-body {
@@ -155,26 +158,32 @@
   /* Typography Hierarchy */
   h1 {
     @apply font-display text-white font-bold;
+    text-shadow: 3px 3px 6px rgba(255, 160, 140, 0.5);
   }
 
   h2 {
     @apply font-heading text-white font-bold;
+    text-shadow: 2px 2px 4px rgba(255, 160, 140, 0.4);
   }
 
   h3 {
     @apply font-heading text-white font-bold;
+    text-shadow: 2px 2px 4px rgba(255, 160, 140, 0.4);
   }
 
   h4 {
     @apply font-heading text-white font-bold;
+    text-shadow: 2px 2px 4px rgba(255, 160, 140, 0.4);
   }
 
   h5 {
     @apply font-accent text-white font-bold;
+    text-shadow: 2px 2px 4px rgba(255, 160, 140, 0.3);
   }
 
   h6 {
     @apply font-accent text-white font-bold;
+    text-shadow: 2px 2px 4px rgba(255, 160, 140, 0.3);
   }
 
   p {
@@ -209,9 +218,15 @@
     @apply font-caption font-medium text-white;
   }
 
+  /* Name styling with enhanced shadow */
+  .name-title {
+    text-shadow: 3px 3px 8px rgba(255, 160, 140, 0.6);
+  }
+
   /* Section Headers */
   .section-header {
     @apply font-heading text-lg font-bold text-white;
+    text-shadow: 2px 2px 4px rgba(255, 160, 140, 0.4);
   }
 }
 
