@@ -10,10 +10,12 @@ import { AnimatedSection } from "@/components/animated-section"
 import { EnhancedProfile } from "@/components/enhanced-profile"
 import { CredentialsSection } from "@/components/credentials-section"
 import { getExperienceInfo, getTechnicalSkillsInfo, getReferencesInfo } from "@/lib/data"
+import P5Background from "@/components/p5-background";
+
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-white border border-zinc-700">
+    <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-white border border-zinc-300">
       {children}
     </div>
   )
@@ -21,16 +23,16 @@ const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
 
 const ReferenceCard = ({ reference }: { reference: any }) => {
   return (
-    <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm h-full">
+    <Card className="bg-zinc-900/30 border-zinc-400 backdrop-blur-sm h-full backdrop-grayscale">
       <CardContent className="p-6">
         <div className="flex items-start gap-4">
           <QuoteIcon className="w-6 h-6 text-white flex-shrink-0 mt-1" />
           <div className="space-y-4">
-            <blockquote className="font-body text-sm text-white italic leading-relaxed">"{reference.quote}"</blockquote>
-            <div className="border-t border-zinc-700 pt-4">
+            <blockquote className="font-body text-sm sm:text-sm text-white italic leading-relaxed">"{reference.quote}"</blockquote>
+            <div className="border-t border-zinc-300 pt-4">
               <div className="font-heading text-white font-bold">{reference.name}</div>
-              <div className="font-accent text-sm text-white">{reference.title}</div>
-              <div className="font-accent text-sm text-rose-800">{reference.company}</div>
+              <div className="font-accent text-lg sm:text-lg text-white">{reference.title}</div>
+              <div className="font-accent text-lg sm:text-lg text-rose-800">{reference.company}</div>
             </div>
           </div>
         </div>
@@ -46,9 +48,9 @@ export default function Home() {
   const references = getReferencesInfo()
 
   return (
-    <main className="min-h-screen bg-black text-white">
-      {/* Background Grid Pattern */}
-      <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-10 z-0"></div>
+    <>
+      <P5Background />
+    <main className="min-h-screen text-white">
 
       <div className="relative z-10 container mx-auto p-3 sm:p-4 pt-4 sm:pt-6 pb-6 sm:pb-8">
         {/* Main Content Grid */}
@@ -63,11 +65,11 @@ export default function Home() {
           <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-4 sm:space-y-6">
             {/* Experience Section - Expanded */}
             <AnimatedSection animation="fade-up" id="experience">
-              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
+              <Card className="bg-zinc-950/50 border-2 border-zinc-300 backdrop-blur-sm backdrop-invert">
                 <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="flex items-center mb-4 sm:mb-4">
                     <BriefcaseIcon className="w-5 h-5 mr-2 text-white" />
-                    <h3 className="font-heading text-lg font-bold text-white">Experience</h3>
+                    <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">Experience</h3>
                   </div>
 
                   <div className="space-y-6 sm:space-y-8">
@@ -95,17 +97,17 @@ export default function Home() {
 
             {/* Skills Section */}
             <AnimatedSection animation="fade-up" id="skills">
-              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
+              <Card className="bg-zinc-900/30 border-zinc-300 backdrop-blur-sm backdrop-invert">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4">
                     <CodeIcon className="w-5 h-5 mr-2 text-white" />
-                    <h3 className="font-heading text-lg font-bold text-white">Technical Skills</h3>
+                    <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">Technical Skills</h3>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2">
                     <AnimatedSection animation="slide-right" delay={100}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-bold text-white">Observability & Monitoring</h4>
+                        <h4 className="font-accent text-xl sm:text-xl font-bold text-white">Observability & Monitoring</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.observability?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -116,7 +118,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={200}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-bold text-white">Development</h4>
+                        <h4 className="font-accent text-xl sm:text-xl font-bold text-white">Development</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.development?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -127,7 +129,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-right" delay={300}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-bold text-white">Infrastructure & DevOps</h4>
+                        <h4 className="font-accent text-xl sm:text-xl font-bold text-white">Infrastructure & DevOps</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.infrastructure?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -138,7 +140,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={400}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-bold text-white">Tools & Platforms</h4>
+                        <h4 className="font-accent text-xl sm:text-xl font-bold text-white">Tools & Platforms</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.tools?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -149,7 +151,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-right" delay={500}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-bold text-white">Security & Authentication</h4>
+                        <h4 className="font-accent text-xl sm:text-xl font-bold text-white">Security & Authentication</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.security?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -160,7 +162,7 @@ export default function Home() {
 
                     <AnimatedSection animation="slide-left" delay={600}>
                       <div className="space-y-3">
-                        <h4 className="font-accent text-sm font-bold text-white">Leadership & Soft Skills</h4>
+                        <h4 className="font-accent text-xl sm:text-xl font-bold text-white">Leadership & Soft Skills</h4>
                         <div className="flex flex-wrap gap-2">
                           {technicalSkills.softSkills?.map((skill, index) => (
                             <SkillTagComponent key={index}>{skill}</SkillTagComponent>
@@ -175,11 +177,11 @@ export default function Home() {
 
             {/* References Section */}
             <AnimatedSection animation="fade-up" id="references">
-              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
+              <Card className="bg-zinc-900/30 border-2 border-zinc-300 backdrop-blur-sm backdrop-invert">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
                     <QuoteIcon className="w-5 h-5 mr-2 text-white" />
-                    <h3 className="font-heading text-lg font-bold text-white">References</h3>
+                    <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">References</h3>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -195,12 +197,12 @@ export default function Home() {
 
             {/* Projects Section */}
             <AnimatedSection animation="fade-up" id="projects">
-              <Card className="bg-zinc-900/70 border-zinc-700 backdrop-blur-sm">
+              <Card className="bg-zinc-900/30 border-2 border-zinc-300 backdrop-blur-sm backdrop-invert">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center">
                       <GlobeIcon className="w-5 h-5 mr-2 text-white" />
-                      <h3 className="font-heading text-lg font-bold text-white">Recent Projects</h3>
+                      <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">Recent Projects</h3>
                     </div>
                     <Button
                       variant="ghost"
@@ -242,5 +244,6 @@ export default function Home() {
       {/* Scroll to Top Button */}
       <EnhancedScrollIndicator />
     </main>
+    </>
   )
 }

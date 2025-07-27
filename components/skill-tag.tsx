@@ -14,7 +14,7 @@ export function SkillTag({ children, variant = "default", className = "" }: Skil
   return (
     <Badge
       variant={variant}
-      className={`bg-zinc-800 text-white border-zinc-700 hover:bg-zinc-700 transition-colors ${className}`}
+      className={`bg-gradient-to-r from-zinc-800 to-zinc-900 text-white border-zinc-400 hover:bg-zinc-600/50 transition-colors ${className}`}
     >
       {children}
     </Badge>

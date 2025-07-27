@@ -23,14 +23,14 @@ export function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <div className="relative">
-      <Card className="bg-zinc-800/50 border-zinc-700 backdrop-blur-sm">
+      <Card className="bg-zinc-900/50 border-zinc-400 backdrop-blur-sm">
         <CardContent className="p-6">
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-1">
             <div className="flex-1">
-              <h4 className="font-heading text-lg font-bold text-white mb-1">{title}</h4>
-              <p className="font-accent text-zinc-200 font-bold mb-2">{company}</p>
+              <h4 className="font-accent text-lg font-bold text-white mb-1">{title}</h4>
+              <p className="font-heading text-xl sm:text-xl text-zinc-200 font-bold mb-2">{company}</p>
             </div>
-            <div className="text-sm text-zinc-300 bg-zinc-700/50 px-3 py-1 rounded-full whitespace-nowrap">
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-800/70 text-white border-zinc-400 font-bold hover:bg-zinc-600/50 text-xs px-3 py-1 rounded-full">
               {period}
             </div>
           </div>
@@ -39,11 +39,11 @@ export function ExperienceCard({
 
           {achievements && achievements.length > 0 && (
             <div className="mb-4">
-              <h5 className="font-heading text-sm font-bold text-white mb-3">Key Achievements</h5>
+              <h5 className="font-heading text-lg sm:text-lg font-bold text-white mb-3">Key Achievements</h5>
               <div className="space-y-2">
                 {achievements.map((achievement, index) => (
                   <div key={index} className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-emerald-300 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-white leading-relaxed">{achievement}</p>
                   </div>
                 ))}
@@ -53,13 +53,13 @@ export function ExperienceCard({
 
           {technologies && technologies.length > 0 && (
             <div>
-              <h5 className="font-heading text-sm font-bold text-white mb-3">Technologies & Skills</h5>
+              <h5 className="font-heading text-lg sm:text-lg font-bold text-white mb-3">Technologies & Skills</h5>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, index) => (
                   <Badge
                     key={index}
                     variant="secondary"
-                    className="bg-zinc-700/50 text-white border-zinc-600 hover:bg-zinc-600/50"
+                    className="bg-gradient-to-r from-purple-400/70 to-pink-500/70 text-white font-bold border-zinc-400 hover:bg-zinc-600/50"
                   >
                     {tech}
                   </Badge>

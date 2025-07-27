@@ -28,13 +28,28 @@ export function AnimatedSection({
   id,
   forceAnimate = false,
 }: AnimatedSectionProps) {
+  const animationContext = useAnimation()
   const { ref, isIntersecting } = useIntersectionObserver({
     threshold,
     rootMargin,
     freezeOnceVisible: true,
   })
 
-  const { settings } = useAnimation()
+  // Handle cases where AnimationProvider is not available
+  let settings
+  try {
+    settings = animationContext.settings
+  } catch (error) {
+    // Fallback settings when AnimationProvider is not available
+    settings = {
+      enabled: true,
+      duration: 700,
+      delay: 100,
+      easing: "ease-out",
+      intensity: 0.5,
+    }
+  }
+
   const shouldAnimate = settings.enabled || forceAnimate
 
   // Calculate actual delay based on settings
