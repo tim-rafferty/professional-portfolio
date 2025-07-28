@@ -85,13 +85,13 @@ export function getCredentialsInfo() {
     education: [
       {
         degree: "Community College Coursework",
-        institution: "DMACC Community College",
+        institution: "DMACC Community College 2009-2010",
         year: "2009-2010",
         logo: "/dmacc-logo.png",
       },
       {
         degree: "High School Diploma",
-        institution: "ADM High School",
+        institution: "ADM High School 2007",
         year: "2007",
         logo: "/adm-community-schools-logo.png",
       },

@@ -30,7 +30,7 @@ export function ExperienceCard({
               <h4 className="font-accent text-lg font-bold text-white mb-1">{title}</h4>
               <p className="font-heading text-xl sm:text-xl text-zinc-200 font-bold mb-2">{company}</p>
             </div>
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-800/70 text-white border-zinc-400 font-bold hover:bg-zinc-600/50 text-xs px-3 py-1 rounded-full">
+            <div className="bg-gradient-to-r from-zinc-400/20 to-gray-600/90 text-white shadow-lg border-zinc-400 font-extrabold hover:bg-zinc-600/50 text-xs px-3 py-1 rounded-full">
               {period}
             </div>
           </div>
