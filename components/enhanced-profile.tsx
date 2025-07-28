@@ -22,18 +22,13 @@ export function EnhancedProfile() {
         <div className="bg-gradient-to-r from-black/80 to-zinc-900/90 p-4 sm:p-6 flex flex-col items-center border-b border-zinc-700">
           <div className="flex flex-col sm:flex-col items-center w-full">
             <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mb-4 border-2 border-white/20 ring-4 ring-zinc-800/50">
-              <Image
-                src="/timothy-profile.png"
-                alt="Timothy Rafferty"
-                fill
-                className="object-cover"
-                priority
-                onError={(e) => {
-                  // Fallback to a placeholder if image fails to load
-                  const target = e.target as HTMLImageElement
-                  target.src = "/placeholder.svg?height=112&width=112&text=TR"
-                }}
-              />
+            <Image
+              src="/timothy-profile.png"
+              alt="Timothy Rafferty"
+              fill
+              className="object-cover"
+              priority
+            />
             </div>
             <div className="text-center">
               <h2 className="font-heading font-bold text-white text-5xl sm:text-5xl tracking-wide name-title">Timothy Rafferty</h2>

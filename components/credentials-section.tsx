@@ -30,16 +30,12 @@ export function CredentialsSection() {
                   className="bg-gradient-to-r from-zinc-900/80 to-zinc-900/70 flex items-center p-4 rounded-lg border border-zinc-400"
                 >
                   <div className="relative w-12 h-12 mr-4 flex-shrink-0">
-                    <Image
-                      src={cert.logo || "/placeholder.svg"}
-                      alt={`${cert.name} logo`}
-                      fill
-                      className="object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement
-                        target.src = "/placeholder-logo.svg"
-                      }}
-                    />
+                  <Image
+                    src={cert.logo || "/placeholder.svg"}
+                    alt={`${cert.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
                   </div>
                   <div className="flex-1">
                     <h5 className="text-sm font-bold text-white">{cert.name}</h5>
@@ -65,16 +61,12 @@ export function CredentialsSection() {
                   className="bg-gradient-to-r from-zinc-900/80 to-zinc-900/70 flex items-center p-4 rounded-lg border border-zinc-400"
                 >
                   <div className="relative w-12 h-12 mr-4 flex-shrink-0">
-                    <Image
-                      src={edu.logo || "/placeholder.svg"}
-                      alt={`${edu.institution} logo`}
-                      fill
-                      className="object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement
-                        target.src = "/placeholder-logo.svg"
-                      }}
-                    />
+                  <Image
+                    src={edu.logo || "/placeholder.svg"}
+                    alt={`${edu.institution} logo`}
+                    fill
+                    className="object-contain"
+                  />
                   </div>
                   <div className="flex-1">
                     <h5 className="text-sm font-bold text-white">{edu.degree}</h5>
