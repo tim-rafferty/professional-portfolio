@@ -119,7 +119,7 @@ const MySketch = () => {
     for (let i = 0; i < count; i++) {
       PARTS.push(new particle(p5, w(p5, 0.5), h(p5, 1.0), "#000", 80, 270, 0, 900, "trunk", PARTS));
       PARTS.push(new particle(p5, w(p5, 0.25), h(p5, 1.0), "#000", 130, 270, 0, 1200, "trunk", PARTS));
-      PARTS.push(new particle(p5, w(p5, 0.75), h(p5, 1.0), "#000", 170, 270, 0, 700, "trunk", PARTS));
+      PARTS.push(new particle(p5, w(p5, 0.75), h(p5, 1.0), "#000", 210, 275, 0, 700, "trunk", PARTS));
     }
   };
 
@@ -143,7 +143,7 @@ const MySketch = () => {
     for (let i = 0; i < count; i++) {
       PARTS.push(new particle(p5, w(p5, 0.5), h(p5, 1.0), "#000", 80, 270, 0, 900, "trunk", PARTS));
       PARTS.push(new particle(p5, w(p5, 0.25), h(p5, 1.0), "#000", 130, 270, 0, 1200, "trunk", PARTS));
-      PARTS.push(new particle(p5, w(p5, 0.75), h(p5, 1.0), "#000", 170, 270, 0, 700, "trunk", PARTS));
+      PARTS.push(new particle(p5, w(p5, 0.75), h(p5, 1.0), "#000", 210, 275, 0, 700, "trunk", PARTS));
     }
   };
 

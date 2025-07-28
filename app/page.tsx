@@ -23,12 +23,12 @@ const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
 
 const ReferenceCard = ({ reference }: { reference: any }) => {
   return (
-    <Card className="bg-zinc-900/30 border-zinc-400 backdrop-blur-sm h-full backdrop-grayscale">
-      <CardContent className="p-6">
+    <Card className="bg-zinc-800/40 border-zinc-400 backdrop-blur-none h-full">
+      <CardContent className="p-3">
         <div className="flex items-start gap-4">
           <QuoteIcon className="w-6 h-6 text-white flex-shrink-0 mt-1" />
           <div className="space-y-4">
-            <blockquote className="font-body text-sm sm:text-sm text-white italic leading-relaxed">"{reference.quote}"</blockquote>
+            <blockquote className="font-inter text-base sm:text-base text-white italic leading-relaxed">"{reference.quote}"</blockquote>
             <div className="border-t border-zinc-300 pt-4">
               <div className="font-heading text-white font-bold">{reference.name}</div>
               <div className="font-accent text-lg sm:text-lg text-white">{reference.title}</div>
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="col-span-1 md:col-span-2 lg:col-span-3 space-y-4 sm:space-y-6">
             {/* Experience Section - Expanded */}
             <AnimatedSection animation="fade-up" id="experience">
-              <Card className="bg-zinc-950/50 border-2 border-zinc-300 backdrop-blur-sm backdrop-invert">
+              <Card className="bg-zinc-900/20 border-2 border-zinc-300 backdrop-blur-sm backdrop-invert">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-4">
                     <BriefcaseIcon className="w-5 h-5 mr-2 text-white" />

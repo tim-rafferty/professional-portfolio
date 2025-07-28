@@ -16,10 +16,10 @@ interface ReferenceCardProps {
 function ReferenceCard({ name, title, company, quote, index }: ReferenceCardProps) {
   return (
     <AnimatedSection delay={index * 0.1}>
-      <Card className="p-6 bg-zinc-900/50 backdrop-blur-sm border-zinc-800 hover:bg-zinc-900/70 transition-colors">
-        <div className="space-y-4">
-          <Quote className="h-8 w-8 text-emerald-400 opacity-60" />
-          <blockquote className="text-sm text-zinc-300 leading-relaxed font-body">"{quote}"</blockquote>
+      <Card className="p-2 bg-zinc-800 backdrop-blur-sm border-zinc-700 hover:bg-zinc-700 transition-colors">
+        <div className="space-y-2">
+          <Quote className="h-8 w-8 text-white opacity-60" />
+          <blockquote className="bg-zinc-900 text-base text-white font-body">"{quote}"</blockquote>
           <div className="pt-2 border-t border-zinc-800">
             <div className="font-heading text-white font-medium">{name}</div>
             <div className="text-sm text-zinc-400 font-body">{title}</div>

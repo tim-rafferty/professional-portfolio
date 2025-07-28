@@ -40,7 +40,7 @@ export function CredentialsSection() {
                   <div className="flex-1">
                     <h5 className="text-sm font-bold text-white">{cert.name}</h5>
                     <p className="text-xs text-white">
-                      {cert.issuer} • {cert.date}
+                      {cert.issuer}
                     </p>
                   </div>
                 </div>
