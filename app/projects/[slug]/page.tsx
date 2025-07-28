@@ -46,16 +46,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <AnimatedSection animation="fade-up" className="lg:col-span-3">
             <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm overflow-hidden">
               <div className="relative h-48 sm:h-64 md:h-80 w-full">
-                <Image
-                  src={project.coverImage || "/placeholder.svg?height=320&width=800&text=Project+Cover"}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement
-                    target.src = "/placeholder.svg?height=320&width=800&text=Project+Cover"
-                  }}
-                />
+              <Image
+                src={project.coverImage || "/placeholder.svg?height=320&width=800&text=Project+Cover"}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4 sm:p-6">
                   <div className="text-xs sm:text-sm text-cyan-400 mb-1 sm:mb-2">{project.category}</div>
@@ -136,16 +132,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                       {project.gallery.map((image, index) => (
                         <AnimatedSection key={index} animation="zoom-in" delay={100 * (index + 1)}>
                           <div className="relative h-40 sm:h-48 rounded-lg overflow-hidden border border-zinc-800">
-                            <Image
-                              src={image.url || `/placeholder.svg?height=192&width=300&text=Gallery+Image+${index + 1}`}
-                              alt={image.caption || `Gallery image ${index + 1}`}
-                              fill
-                              className="object-cover"
-                              onError={(e) => {
-                                const target = e.target as HTMLImageElement
-                                target.src = `/placeholder.svg?height=192&width=300&text=Gallery+Image+${index + 1}`
-                              }}
-                            />
+                          <Image
+                            src={image.url || `/placeholder.svg?height=192&width=300&text=Gallery+Image+${index + 1}`}
+                            alt={image.caption || `Gallery image ${index + 1}`}
+                            fill
+                            className="object-cover"
+                          />
                           </div>
                           {image.caption && <p className="text-xs text-zinc-400 mt-2">{image.caption}</p>}
                         </AnimatedSection>
@@ -196,16 +188,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                           <Link href={`/projects/${related.slug}`} className="block group">
                             <div className="flex items-center gap-2 sm:gap-3">
                               <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded overflow-hidden flex-shrink-0">
-                                <Image
-                                  src={related.image || "/placeholder.svg?height=64&width=64&text=Project"}
-                                  alt={related.title}
-                                  fill
-                                  className="object-cover"
-                                  onError={(e) => {
-                                    const target = e.target as HTMLImageElement
-                                    target.src = "/placeholder.svg?height=64&width=64&text=Project"
-                                  }}
-                                />
+                              <Image
+                                src={related.image || "/placeholder.svg?height=64&width=64&text=Project"}
+                                alt={related.title}
+                                fill
+                                className="object-cover"
+                              />
                               </div>
                               <div>
                                 <h3 className="text-sm sm:text-base font-medium group-hover:text-cyan-400 transition-colors">
