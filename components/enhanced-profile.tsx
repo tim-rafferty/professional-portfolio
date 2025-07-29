@@ -31,7 +31,7 @@ export function EnhancedProfile() {
             />
             </div>
             <div className="text-center">
-              <h2 className="font-heading font-bold text-white text-5xl sm:text-5xl tracking-wide name-title">Timothy Rafferty</h2>
+              <h2 className="font-raff font-bold text-white text-5xl sm:text-5xl tracking-wide name-title">Timothy Rafferty</h2>
               <p className="font-accent text-sm text-white mb-1 font-bold">{personalInfo.title}</p>
               <div className="flex items-center justify-center text-xs text-white mb-4">
                 <MapPin className="w-3 h-3 mr-1" />

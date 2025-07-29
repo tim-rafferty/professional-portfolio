@@ -27,10 +27,10 @@ export function ExperienceCard({
         <CardContent className="p-6">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-1">
             <div className="flex-1">
-              <h4 className="font-accent text-lg font-bold text-white mb-1">{title}</h4>
+              <h4 className="font-accent text-lg text-shadow-lg font-black text-white mb-1">{title}</h4>
               <p className="font-heading text-xl sm:text-xl text-zinc-200 font-bold mb-2">{company}</p>
             </div>
-            <div className="bg-gradient-to-r from-fuchsia-400/20 to-indigo-600/90 text-white shadow-2xl border-zinc-400 font-extrabold hover:bg-zinc-600/50 text-xs px-3 py-1 rounded-full">
+            <div className="bg-gradient-to-r from-fuchsia-700/50 to-indigo-600/90 text-white shadow-2xl border-zinc-400 font-extrabold hover:bg-zinc-600/50 text-xs px-3 py-1 rounded-full">
               {period}
             </div>
           </div>

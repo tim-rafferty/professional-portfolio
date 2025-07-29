@@ -69,7 +69,7 @@ export default function Home() {
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-4">
                     <BriefcaseIcon className="w-5 h-5 mr-2 text-white" />
-                    <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">Experience</h3>
+                    <h3 className="font-super text-3xl sm:text-3xl font-bold text-white">Experience</h3>
                   </div>
 
                   <div className="space-y-6 sm:space-y-8">
@@ -101,7 +101,7 @@ export default function Home() {
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4">
                     <CodeIcon className="w-5 h-5 mr-2 text-white" />
-                    <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">Technical Skills</h3>
+                    <h3 className="font-super text-3xl sm:text-3xl font-bold text-white">Technical Skills</h3>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2">
@@ -181,7 +181,7 @@ export default function Home() {
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
                     <QuoteIcon className="w-5 h-5 mr-2 text-white" />
-                    <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">References</h3>
+                    <h3 className="font-super text-3xl sm:text-3xl font-bold text-white">References</h3>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -202,7 +202,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className="flex items-center">
                       <GlobeIcon className="w-5 h-5 mr-2 text-white" />
-                      <h3 className="font-heading text-2xl sm:text-2xl font-bold text-white">Recent Projects</h3>
+                      <h3 className="font-super text-3xl sm:text-3xl font-bold text-white">Recent Projects</h3>
                     </div>
                     <Button
                       variant="ghost"
