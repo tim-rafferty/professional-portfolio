@@ -1,6 +1,6 @@
 # My professional website
 
-Designed this site to be easily customizable through a JSON data file, still working on making additional updates.
+Designed this site to be easily customizable through a JSON data file. The site is a responsive professional portfolio built entirely with React components, showcasing web development through a sleek, modern user interface. The site is structured using HTML, Tailwind CSS, and TypeScript, and is fully optimized for seamless display across a wide range of devices and screen sizes. A dynamic generative art background, powered by a p5.js script, activates on page load and window resize to enhance visual impact.
 
 ### JSON structure
 
@@ -11,5 +11,3 @@ Designed this site to be easily customizable through a JSON data file, still wor
 5. **Experience**: Contains your work experience details.
 6. **Credentials**: Contains your certifications, education, and skills.
 7. **Technical Skills**: Contains your technical skills categorized by type.
-
-export { projects }
