@@ -64,7 +64,7 @@ export function getReferencesInfo() {
     },
     {
       name: "Dante O'Donnell",
-      title: "Professional Services Consultant",
+      title: "Deployment Lead",
       company: "Blend",
       quote:
         "I've had the pleasure of working closely with Tim for the past 3.5 years at Blend, and I can say without hesitation that he is one of the most reliable, knowledgeable, and dependable colleagues I've encountered in my career. He is one of only two people for whom I would confidently vouch with both my personal and professional reputation.",
@@ -78,7 +78,7 @@ export function getCredentialsInfo() {
       {
         name: "CompTIA Security+",
         issuer: "CompTIA",
-        date: "2022",
+        date: "2023",
         logo: "/comptia-security-plus-logo.png",
       },
     ],

@@ -71,7 +71,7 @@
     font-size: 20px;
     letter-spacing: -0.05em;
     color:rgb(255, 255, 255);
-    text-shadow: 2px 0px 0px rgb(39, 120, 32), 4px 0px 0px rgb(186, 50, 198);
+    text-shadow: 2px 0px 0px rgb(39, 120, 32), -1px 0px 0px rgb(186, 50, 198);
   }
 
     .font-super {
@@ -100,7 +100,7 @@
     font-size: 24px;
     letter-spacing: -0.05em;
     color:rgb(255, 255, 255);
-    text-shadow: 2px 0px 0px rgb(143, 143, 27), 3px 0.5px 0px rgb(255, 72, 0);
+    text-shadow: 2px 0px 0px rgb(143, 143, 27), -1px 0.5px 0px rgb(255, 72, 0);
   }
 
   .font-body {
