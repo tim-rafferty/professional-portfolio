@@ -71,17 +71,17 @@
     font-size: 20px;
     letter-spacing: -0.05em;
     color:rgb(255, 255, 255);
-    text-shadow: 2px 0px 0px rgb(39, 120, 32), -1px 0px 0px rgb(186, 50, 198);
+    text-shadow: 2px 0px 0px rgb(0, 0, 0), -1px 0px 0px rgb(54, 54, 54);
   }
 
     .font-super {
     font-family: "DM Serif Text", serif;
     font-weight: 700;
-    font-size: 20px;
-    letter-spacing: -0.05em;
+    /* Let Tailwind text utilities control the size */
+    /* font-size removed to avoid overriding responsive text classes */
+    letter-spacing: -0.06em;
     color:rgb(255, 255, 255);
-    text-shadow: 2px 0px 0px rgb(39, 120, 32), 4px 0px 0px rgb(186, 50, 198),
-    -1px 0px 0px rgb(172, 153, 8), -2px 0px 0px rgb(153, 139, 14), -3px 0px 0px rgb(146, 155, 12);
+    text-shadow: -1.5px 0px 0px rgb(58, 58, 58), 2.7px 0px 0px rgb(0, 0, 0), 3.2px 0px 0px rgb(164, 121, 72);
   }
 
   .font-display {
@@ -97,19 +97,20 @@
   .font-accent {
     font-family: "DM Serif Text", serif;
     font-weight: 700;
-    font-size: 24px;
-    letter-spacing: -0.05em;
+    /* font-size removed to allow responsive utilities */
+    letter-spacing: -0.08em;
     color:rgb(255, 255, 255);
-    text-shadow: 2px 0px 0px rgb(143, 143, 27), -1px 0.5px 0px rgb(255, 72, 0);
+    text-shadow: 1px 1px 0px rgb(139, 137, 137), -1px -1px 0px rgb(0, 0, 0);
   }
 
   .font-body {
     font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    letter-spacing: -0.02em;
-    line-height: 1;
-    color:rgb(227, 215, 192);
+    font-weight: 700;
+    /* font-size removed to allow responsive utilities and defaults */
+    letter-spacing: -0.07em;
+    line-height: 1.5;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(1, 7, 0), -1px -1px 1px rgb(0, 0, 0), 1px 0px 1px rgb(58, 58, 58), -1px 0px 1px rgb(140, 160, 137);
   }
 
   .font-caption {
@@ -126,10 +127,7 @@
     font-size: 20px;
     letter-spacing: -0.10em;
     color:rgb(255, 255, 255);
-    text-shadow: 2px 0px 0px rgb(60, 108, 116), 3px 0px 0px rgb(42, 87, 119), 4px 0px 0px rgb(54, 100, 123), 
-                  -1px 0px 0px rgb(172, 153, 8), -2px 0px 0px rgb(153, 139, 14), -3px 0px 0px rgb(146, 155, 12),
-                  6px 0px 0px rgb(175, 170, 100), 7px 0px 0px rgb(146, 176, 55), 8px 0px 0px rgb(157, 175, 57),
-                  -5px 0px 0px rgb(216, 66, 103), -6px 0px 0px rgb(203, 49, 106), -7px 0px 0px rgb(200, 46, 116);
+    text-shadow: 2px 0px 0px rgb(60, 108, 116), 3px 0px 0px rgb(42, 87, 119), 4px 0px 0px rgb(54, 100, 123);
   }
 
   /* Custom Scrollbar */

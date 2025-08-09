@@ -31,9 +31,9 @@ export function EnhancedProfile() {
             />
             </div>
             <div className="text-center">
-              <h2 className="font-super font-bold text-white text-5xl sm:text-5xl tracking-wide name-title">Timothy Rafferty</h2>
-              <p className="font-accent text-sm text-white mb-1 font-bold">{personalInfo.title}</p>
-              <div className="flex items-center justify-center text-xs text-white mb-4">
+              <h2 className="font-super font-bold text-white text-[42px] sm:text-5xl md:text-6xl tracking-wide name-title">Timothy Rafferty</h2>
+              <p className="font-accent text-base text-white mb-1 font-bold">{personalInfo.title}</p>
+              <div className="flex items-center justify-center text-sm text-white mb-4">
                 <MapPin className="w-3 h-3 mr-1" />
                 <span>{personalInfo.location}</span>
               </div>
@@ -82,15 +82,15 @@ export function EnhancedProfile() {
 
           <TabsContent value="about" className="p-4 sm:p-6 space-y-4 sm:space-y-6 focus:outline-none">
             <div className="space-y-3">
-              <h3 className="font-heading text-sm font-bold text-white flex items-center">
+              <h3 className="font-heading text-base sm:text-lg font-bold text-white flex items-center">
                 <User className="w-4 h-4 mr-2 text-white" />
                 About Me
               </h3>
-              <p className="text-sm text-white font-normal">{aboutInfo.bio}</p>
+              <p className="font-body text-[15px] sm:text-base md:text-base">{aboutInfo.bio}</p>
             </div>
 
             <div className="space-y-3">
-              <h3 className="font-heading text-sm font-bold text-white flex items-center">
+              <h3 className="font-heading text-base sm:text-lg font-bold text-white flex items-center">
                 <Briefcase className="w-4 h-4 mr-2 text-white" />
                 Professional Focus
               </h3>
@@ -98,7 +98,7 @@ export function EnhancedProfile() {
                 {aboutInfo.focus.map((item, index) => (
                   <div key={index} className="flex items-start">
                     <span className="text-white mr-2">•</span>
-                    <p className="text-sm text-white font-normal">{item}</p>
+                    <p className="font-body text-[15px] sm:text-base">{item}</p>
                   </div>
                 ))}
               </div>
