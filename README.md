@@ -18,3 +18,4 @@ Designed this site to be easily customizable through a JSON data file, still wor
 - TypeScript: Component code
 - ShadCN UI: Design and UI
 - Lucide Icons: Icons
+- p5js: Background draws generative art with p5js
