@@ -12,9 +12,9 @@ Designed this site to be easily customizable through a JSON data file, still wor
 6. **Credentials**: Contains your certifications, education, and skills.
 7. **Technical Skills**: Contains your technical skills categorized by type.
 
-**Core Technologies
--React: All components and outputs are React-based
--Tailwind CSS: Used for styling
--TypeScript: Component code
--ShadCN UI: Design and UI
--Lucide Icons: Icons
+**Core Technologies**
+- React: All components and outputs are React-based
+- Tailwind CSS: Used for styling
+- TypeScript: Component code
+- ShadCN UI: Design and UI
+- Lucide Icons: Icons
